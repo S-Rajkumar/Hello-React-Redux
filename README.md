@@ -19,10 +19,6 @@ Launches the test runner in the interactive watch mode.
 
 Builds the app for production to the `build` folder.
 
-## Structure Map
-
-[Map](docs/chart.png)
-
 ## command used to install redux
 
 ### `yarn add redux`
@@ -33,7 +29,26 @@ Builds the app for production to the `build` folder.
 
 ### `https://addons.mozilla.org/en-US/firefox/addon/reduxdevtools/`
 
+## gh-pages setup
+
+- `yarn add gh-pages - save-dev`
+
+- add homepage attribute in package.json like below
+    - "homepage": "https://s-rajkumar.github.io/Hello-React-Redux"
+
+- add below in package.json `scripts` attribute
+    - "predeploy": "yarn build"
+    - "deploy": "gh-pages -d build"
+
+### `yarn deploy`
+
+Builds project and commit build folder to gh-pages branch in remote repository
+
 ## Docs
+
+### Structure Map
+
+![Map](docs/chart.png "Map")
 
 Redux eliminates data not to be inside the components. 
 
@@ -59,11 +74,11 @@ Redux eliminates data not to be inside the components.
     - this used to trigger/call the actions
 
 ## Flow
- 1.Store
+ 1 Store
     - here allready we defined actions and reducers
- 2.Dispatch
+ 2 Dispatch
     - call the action you want
- 3.useSelector
+ 3 useSelector
     - get value of state/data
 
 
